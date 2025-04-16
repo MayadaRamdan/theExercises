@@ -17,6 +17,7 @@ import org.example.exercises.nestedDataprocessing.Department;
 import org.example.exercises.nestedDataprocessing.DepartmentProcess;
 import org.example.exercises.nestedDataprocessing.Employee;
 import org.example.exercises.primesandnonprimes.PrimeNonPrimeCollector;
+import org.example.exercises.refactor.FirstNonNullValue;
 
 
 import java.time.LocalDate;
@@ -172,5 +173,10 @@ public class Main {
                 .flatMap(Optional::stream)
                 .toList();
         System.out.println("Phone Numbers: " + phoneNumbers);
+
+
+
+        //19 Refactor FirstNonNullValue
+        System.out.println( FirstNonNullValue.notNullValue());
     }
 }
