@@ -1,5 +1,6 @@
 package org.example;
 
+import jdk.jfr.Threshold;
 import org.example.exercises.*;
 import org.example.exercises.NestedValidation.Email;
 import org.example.exercises.NestedValidation.EmailNotValidException;
@@ -18,6 +19,9 @@ import org.example.exercises.nestedDataprocessing.DepartmentProcess;
 import org.example.exercises.nestedDataprocessing.Employee;
 import org.example.exercises.primesandnonprimes.PrimeNonPrimeCollector;
 import org.example.exercises.refactor.FirstNonNullValue;
+import org.example.exercises.refactor.RItem;
+import org.example.exercises.refactor.ROrder;
+import org.example.exercises.refactor.SumPricesRefactorEx2;
 
 
 import java.time.LocalDate;
@@ -178,5 +182,19 @@ public class Main {
 
         //19 Refactor FirstNonNullValue
         System.out.println( FirstNonNullValue.notNullValue());
+
+
+        // Refactor  Sum Prices Over a Threshold
+        RItem item1 =new RItem(400);
+        RItem item2 =new RItem(150);
+        RItem item3 =new RItem(200);
+        List<RItem> rItemList =List.of(item1 ,item2 ,item3 );
+
+        ROrder rOrder1 =new ROrder(rItemList);
+        ROrder rOrder2 =new ROrder(rItemList);
+        ROrder rOrder3 =new ROrder(rItemList);
+        List<ROrder> rOrderList =List.of( rOrder1,rOrder2,rOrder3);
+
+        System.out.println(SumPricesRefactorEx2.sumPrices(rOrderList));
     }
 }
